@@ -1,7 +1,7 @@
 <?php
 
 get_header();
-echo "<!-- index.php -->";
+echo "<!-- archive.php -->";
 ?>
 
 
@@ -9,7 +9,8 @@ echo "<!-- index.php -->";
 				<div class="container">
 					<section>
 						<header class="major">
-                            <h2><?php wp_title(''); ?></h2>
+                            <h2>Posts</h2>
+                            <span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
 						</header>
                         
                         <?php
@@ -18,13 +19,12 @@ echo "<!-- index.php -->";
 
                                     <h3 class="byline"><?php the_title(); ?></h3>
                                     <?php 
-                                        $content = get_the_excerpt();
-                                        $resumo = substr($content, 0, 450);
-                                        echo '<p>'.$resumo.'</p>';
+                                        $content = get_the_content();
+                                        $resumo = substr($content, 0, 450).'[...]';
+                                        echo $resumo;
 
                                     ?>
                                     <a href="<?php the_permalink();?>" class="button">Saiba mais</a>
-                                    <hr>
                                     <br>
 
                                 <?php endwhile;

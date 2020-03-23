@@ -26,4 +26,12 @@ wp_register_script('init', get_template_directory_uri(). '/js/init.js');
 wp_enqueue_script('init');
 
 
+/* register menus */
+
+register_nav_menus(array(
+	'primary' =>  __( 'Primary Menu'),
+));
+
+
+
 ?>

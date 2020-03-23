@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Horizons by TEMPLATED</title>
+		<title><?php bloginfo('name').wp_title('|'); ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -30,36 +30,22 @@
 				<div class="container">
 						
 					<!-- Logo -->
-						<h1><a href="#" id="logo">Untitled</a></h1>
+						<h1><a href="<?php echo home_url();?>" id="logo"><?php bloginfo('name'); ?></a></h1>
 					
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li>
-									<a href="">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="">Phasellus consequat</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li><a href="#">Veroeros feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
-						</nav>
+					<!-- Nav -->						
+					<?php
+								$args = array(
+								'theme_location'  => 'primary',
+								'menu_class'      => 'menu_class',
+								'container_class' => 'container_class',
+								'menu'            => '',
+        						'container'       => 'nav',
+        						'container_class' => '',
+        						'container_id'    => 'nav',
+        						'menu_class'      => '',
+        						'menu_id'         => 'nav'
+							);?>
+							<?php wp_nav_menu( $args ); ?>
 
 				</div>
 			</div>
