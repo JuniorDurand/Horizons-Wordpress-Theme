@@ -8,13 +8,13 @@
 <div class="wrapper style2">
 				<section class="container">
 					<header class="major">
-						<h2>Nulla luctus eleifend</h2>
-						<span class="byline">Mauris vulputate dolor sit amet nibh</span>
+						<h2><?=  get_theme_mod('first-section-title');?></h2>
+						<span class="byline"><?=  get_theme_mod('first-section-sub-title');?></span>
 					</header>
 					<div class="row no-collapse-1">
 						<section class="4u">
-							<a href="#" class="image feature"><img src="<?php echo(get_template_directory_uri()."/images/pic02.jpg") ?>" alt=""></a>
-							<p>Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat.</p>
+							<a href="#" class="image feature"><img src="<?php echo wp_get_attachment_url(get_theme_mod('first-section-item-1-image')); ?>" alt=""></a>
+							<p><?php echo get_theme_mod('first-section-item-1-text'); ?></p>
 						</section>
 						<section class="4u">
 							<a href="#" class="image feature"><img src="<?php echo(get_template_directory_uri()."/images/pic03.jpg") ?>" alt=""></a>
